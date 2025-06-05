@@ -1,84 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Web Layout - Sidebar Below</title>
-  <link rel="stylesheet" href="/css/cssindex.css">
- 
-</head>
-<body>
-    <header class="top-header">
-        <div class="logo">
-            <img src="/anh/logo.png" alt="Logo" height="60">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Bạn muốn tìm Laptop gì?">
-            <button><i class="search-icon">🔍</i></button>
-        </div>
-        <div class="cart">
-            <a href="#"><span>0đ</span> 🛒</a>
-        </div>
-        <div class="login-register" style="cursor: pointer;">
-          <a href="login.html">Đăng nhập</a> / <a href="register.html">Đăng ký</a>
-        </div>
-    </header>
-<nav class="main-menu">
-        <a href="#">MACBOOK</a>
-        <a href="#">DELL</a>
-        <a href="#">HP</a>
-        <a href="#">LENOVO THINKPAD</a>
-        <a href="#">GAMMING</a>
-        <a href="#">ASUS</a>
-        <a href="#">LENOVO</a>
-        <a href="#">TIN TỨC</a>
-</nav>
+  <title>ANH EM SHOP</title>
+  <link rel="stylesheet" href="./css/index.css">
 
-<main>
+</head>
+
+<body>
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="./anh/logo.png" alt="Logo" height="60" style="cursor: pointer;">
+      </a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Bạn muốn tìm Laptop gì?">
+      <button><i class="search-icon">🔍</i></button>
+    </div>
+    <div class="cart">
+      <a href="#"><span>0đ</span> 🛒</a>
+    </div>
+    <div class="login-register" id="user-info" style="cursor: pointer;">
+      <a href="login.html" id="login-link">Đăng nhập</a> /
+      <a href="register.html" id="register-link">Đăng ký</a>
+    </div>
+
+  </header>
+  <nav class="main-menu">
+    <a href="#">MACBOOK</a>
+    <a href="#">DELL</a>
+    <a href="#">HP</a>
+    <a href="#">LENOVO THINKPAD</a>
+    <a href="#">GAMMING</a>
+    <a href="#">ASUS</a>
+    <a href="#">LENOVO</a>
+    <a href="#">TIN TỨC</a>
+  </nav>
+
+  <main>
     <section class="welcome-section">
-        <div class="welcome-container">
-          
-          <div class="slider">
-            <img src="anh/anh1.jpg" alt="Slide 1" id="slide">
-            <button class="prev" onclick="prevSlide()">❮</button>
-            <button class="next" onclick="nextSlide()">❯</button>
-          </div>
-      
-          <div class="banner">
-            <img src="anh/anh2.jpg" alt="Banner">
-          </div>
+      <div class="welcome-container">
+
+        <div class="slider">
+          <img src="./anh/anh1.jpg" alt="Slide 1" id="slide">
+          <button class="prev" onclick="prevSlide()">❮</button>
+          <button class="next" onclick="nextSlide()">❯</button>
         </div>
+
+        <div class="banner">
+          <img src="./anh/anh2.jpg" alt="Banner">
+        </div>
+      </div>
     </section>
     <section class="product-list">
-        <div class="product-card">
-          <div class="discount-badge">-10% Giá hủy diệt</div>
-          <img src="/anh/laptop1.jpg" alt="Laptop 1">
-          <h3>Dell Precision 7530 i7-8850H Ram 16Gb 15.6" FHD</h3>
-          <p class="old-price">9.900.000đ</p>
-          <p class="new-price">8.900.000đ</p>
-        </div>
-        <div class="product-card">
-          <div class="discount-badge">-3% Mới về</div>
-          <img src="/anh/laptop2.jpg" alt="Laptop 2">
-          <h3>Dell Precision 7540 i7-9850H Quadro T1000 15.6"</h3>
-          <p class="old-price">11.900.000đ</p>
-          <p class="new-price">11.500.000đ</p>
-        </div>
-      
-        <div class="product-card">
-          <div class="discount-badge">-4% Flashsale</div>
-          <img src="/anh/laptop3.jpg" alt="Laptop 3">
-          <h3>Dell Precision 5570 i7-12800H RTX A1000 4GB</h3>
-          <p class="old-price">24.700.000đ</p>
-          <p class="new-price">23.700.000đ</p>
-        </div>
-      </section>
-      
-</main>
+      <div class="product-card">
+        <div class="discount-badge">-10% Giá hủy diệt</div>
+        <img src="./anh/laptop1.jpg" alt="Laptop 1">
+        <h3>Dell Precision 7530 i7-8850H Ram 16Gb 15.6" FHD</h3>
+        <p class="old-price">9.900.000đ</p>
+        <p class="new-price">8.900.000đ</p>
+      </div>
+      <div class="product-card">
+        <div class="discount-badge">-3% Mới về</div>
+        <img src="./anh/laptop2.jpg" alt="Laptop 2">
+        <h3>Dell Precision 7540 i7-9850H Quadro T1000 15.6"</h3>
+        <p class="old-price">11.900.000đ</p>
+        <p class="new-price">11.500.000đ</p>
+      </div>
 
-<footer class="site-footer">
+      <div class="product-card">
+        <div class="discount-badge">-4% Flashsale</div>
+        <img src="./anh/laptop3.jpg" alt="Laptop 3">
+        <h3>Dell Precision 5570 i7-12800H RTX A1000 4GB</h3>
+        <p class="old-price">24.700.000đ</p>
+        <p class="new-price">23.700.000đ</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
     <div class="footer-container">
-  
+
       <div class="footer-column">
         <h3>THÔNG TIN LIÊN HỆ</h3>
         <p>Địa chỉ: 69 Tân Lập-Đông Hòa-Dĩ An-Bình Dương </p>
@@ -101,7 +107,7 @@
           <li>Chiều: 13:30 đến 17:00</li>
         </ul>
       </div>
-  
+
       <div class="footer-column">
         <h3>THÔNG TIN DỊCH VỤ</h3>
         <ul>
@@ -123,14 +129,16 @@
           <li>Địa chỉ: 69 Tân Lập-Đông Hòa-Dĩ An-Bình Dương</li>
         </ul>
       </div>
-  
+
     </div>
   </footer>
-  
-<a href="tel:0905684993" class="call-button">
-    <img src="/anh/dienthoai.png" alt="Gọi ngay">
+
+  <a href="tel:0905684993" class="call-button">
+    <img src="./anh/dienthoai.png" alt="Gọi ngay">
     Gọi Ngay 0905684993
   </a>
-<script src="/js/js1.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/auth.js"></script>
 </body>
+
 </html>

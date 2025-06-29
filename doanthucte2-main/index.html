@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+  <title>ANH EM SHOP</title>
+  <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+  <header class="top-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="./anh/logo.png" alt="Logo" height="60" style="cursor: pointer;">
+      </a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Bạn muốn tìm Laptop gì?">
+      <button><i class="search-icon">🔍</i></button>
+    </div>
+    <div class="cart">
+      <a href="cart.html"><span>0đ</span> 🛒</a>
+    </div>
+    <div class="login-register" id="user-info" style="cursor: pointer;">
+      <a href="login.html" id="login-link">Đăng nhập</a> /
+      <a href="register.html" id="register-link">Đăng ký</a>
+    </div>
+
+  </header>
+  
+  <main>
+    <section class="welcome-section">
+      <div class="welcome-container">
+
+        <div class="slider">
+          <img src="./anh/anh1.jpg" alt="Slide 1" id="slide">
+          <button class="prev" onclick="prevSlide()">❮</button>
+          <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+
+        <div class="banner">
+          <img src="./anh/anh2.jpg" alt="Banner">
+        </div>
+      </div>
+    </section>
+    <section class="featured-products-section">
+      <h2>🔥 SẢN PHẨM NỔI BẬT</h2>
+      <div class="featured-products-list"></div>
+    </section>
+    <section class="brand-logos-section">
+      <div class="brand-logos-container">
+        <a href="#" data-category-id="4"><img src="./anh/logo asus.jpg" alt="ASUS"></a>
+        <a href="#" data-category-id="5"><img src="./anh/logo msi.jpg" alt="MSI"></a>
+        <a href="#" data-category-id="2"><img src="./anh/logo lenovo.png" alt="Lenovo"></a>
+        <a href="#" data-category-id="6"><img src="./anh/logo HP.png" alt="HP"></a>
+        <a href="#" data-category-id="3"><img src="./anh/logo acer.jpg" alt="Acer"></a>
+        <a href="#" data-category-id="1"><img src="./anh/logo dell.png" alt="Dell"></a>
+        <a href="#" data-category-id="7"><img src="./anh/logo mac.png" alt="Macbook"></a>
+        
+      </div>
+    </section>
+    <section class="product-list"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-column">
+        <h3>THÔNG TIN LIÊN HỆ</h3>
+        <p>Địa chỉ: 69 Tân Lập-Đông Hòa-Dĩ An-Bình Dương </p>
+        <p>Hoặc đi 69 Tân Lập-Đông Hòa-Dĩ An-Bình Dương</p>
+        <p><strong>Phản hồi chất lượng dịch vụ</strong></p>
+        <p>📞 Kinh doanh: 0905684993</p>
+        <p>🛠 Hỗ trợ kỹ thuật: 0905684993</p>
+        <p>📧 Email: haotamtkp@gmail.com</p>
+      </div>
+      <div class="footer-column">
+        <h3>THỜI GIAN LÀM VIỆC</h3>
+        <p><strong>Bán hàng:</strong> Thứ 2 - Chủ nhật</p>
+        <ul>
+          <li>Thứ 2 - Thứ 7: 8:30 đến 19:00</li>
+          <li>Chủ nhật: 09:00 đến 17:00</li>
+        </ul>
+        <p><strong>Bảo hành:</strong> Thứ 2 - Thứ 7</p>
+        <ul>
+          <li>Sáng: 9:00 đến 12:00</li>
+          <li>Chiều: 13:30 đến 17:00</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>THÔNG TIN DỊCH VỤ</h3>
+        <ul>
+          <li>Giới thiệu</li>
+          <li>Tác giả</li>
+          <li>Hướng dẫn mua hàng</li>
+          <li>Mua Laptop trả góp</li>
+          <li>Chính sách đổi trả</li>
+          <li>Chính sách bảo hành</li>
+          <li>Chính sách Giao - Nhận</li>
+          <li>Chính sách Bảo Mật Thông Tin</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>VỀ CHÚNG TÔI</h3>
+        <ul>
+          <li>Hộ Kinh Doanh: LAPTOP</li>
+          <li>Người đại diện: Nguyễn Hoàng Hảo Tâm</li>
+          <li>Địa chỉ: 69 Tân Lập-Đông Hòa-Dĩ An-Bình Dương</li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="tel:0905684993" class="call-button">
+    <img src="./anh/dienthoai.png" alt="Gọi ngay">
+    Gọi Ngay 0905684993
+  </a>
+  <script src="./js/main.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/cart.js"></script>
+</body>
+
+</html>

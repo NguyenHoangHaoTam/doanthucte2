@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập Admin</title>
+  <link rel="stylesheet" href="./css/admin-login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>🔒 Đăng nhập Admin</h2>
+    <form id="admin-login-form">
+      <div class="form-group">
+        <input type="text" id="admin-username" placeholder="Tên đăng nhập" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="admin-password" placeholder="Mật khẩu" required>
+      </div>
+      <button type="submit">Đăng nhập</button>
+      <p id="admin-login-error" class="error-message"></p>
+    </form>
+  </div>
+
+  <p id="admin-login-error" style="color:red;"></p>
+
+  <script src="./js/admin-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản trị Admin - ANH EM SHOP</title>
+  <link rel="stylesheet" href="./css/product-management.css">
+  <link rel="stylesheet" href="./css/category.css">
+  <link rel="stylesheet" href="./css/user.css">
+  <link rel="stylesheet" href ="./css/order.css">
+  <link rel="stylesheet" href ="css/review.css">
+  <script>
+    const token = localStorage.getItem('admin_token');
+    if (!token) {
+      window.location.href = "admin-login.html";
+    }
+  </script>
+  <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="header-top">
+        <div class="header-title">
+          <div class="shop-icon"></div>
+          <h1>ANH EM SHOP - ADMIN</h1>
+        </div>
+        <div class="admin-info" id="admin-info">
+          <div class="admin-avatar loading-avatar" id="admin-avatar">A</div>
+          <div class="admin-details">
+            <span class="admin-welcome">Xin chào,</span>
+            <span class="admin-name" id="admin-display-name">Đang tải...</span>
+            <span class="admin-status">ONLINE</span>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <a href="#" id="tab-products" class="active">Quản lý sản phẩm</a>
+        <a href="#" id="tab-categories">Quản lý danh mục</a>
+        <a href="#" id="tab-users">Quản lý người dùng</a>
+        <a href="#" id="tab-orders">Quản lý đơn hàng</a>
+        <a href="#" id="tab-reviews">Quản lý đánh giá</a>
+        <a href="#" id="tab-statistics">Thống kê</a>
+        <a href="#" id="admin-logout">Đăng xuất</a>
+      </nav>
+    </div>
+  </header>
+  <main id="admin-content">
+    <div style="background: rgba(255,255,255,0.9); padding: 30px; border-radius: 15px; text-align: center;">
+      <h2>Chào mừng đến với trang quản trị!</h2>
+      <p>Chọn một mục từ menu để bắt đầu quản lý.</p>
+    </div>
+  </main>
+  <script src="./js/admin.js"></script>
+  <script src="./js/admin-auth.js"></script>
+  <script src="./js/admin-reviews.js"></script>
+  <script src="./js/productManagement.js"></script>
+  <script src="./js/CategoryManagement.js"></script>
+  <script src="./js/UserManagement.js"></script>
+  <script src="./js/OrderManagement.js"></script>
+  <script src="./js/StatisticsManagement.js"></script>
+  
+</body>
+</html>

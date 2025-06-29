@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký Admin - ANH EM SHOP</title>
+  <link rel="stylesheet" href="./css/admin.css">
+  <style>
+    .register-container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .register-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .register-btn:hover {
+      background-color: #45a049;
+    }
+    .error-message {
+      color: red;
+      margin-top: 10px;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>Đăng ký Admin</h2>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Xác nhận mật khẩu:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+      </div>
+      <button type="submit" class="register-btn">Đăng ký</button>
+      <div id="error-message" class="error-message"></div>
+    </form>
+    <div class="login-link">
+      Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      const errorMessage = document.getElementById('error-message');
+
+      // Kiểm tra mật khẩu trùng khớp
+      if (password !== confirmPassword) {
+        errorMessage.textContent = "Mật khẩu không trùng khớp!";
+        return;
+      }
+
+      try {
+        const response = await fetch('http://localhost:8080/login/Sign_up', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            username: username,
+            email: email,
+            password: password,
+            role_id: 2, 
+            fullname: "Admin",
+            address: "Admin Address",
+            gender: "Nam"
+          })
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+          alert("Đăng ký thành công! Vui lòng đăng nhập.");
+          window.location.href = "login.html";
+        } else {
+          errorMessage.textContent = "Đăng ký thất bại: " + (result.data || "Vui lòng thử lại sau");
+        }
+      } catch (error) {
+        errorMessage.textContent = "Lỗi kết nối đến server. Vui lòng thử lại sau.";
+        console.error('Register error:', error);
+      }
+    });
+  </script>
+</body>
+</html>

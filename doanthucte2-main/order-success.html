@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thanh toán thành công</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/order-success.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="success-container">
+    <div class="success-card">
+      <h1>🎉 Cảm ơn bạn!</h1>
+      <p>Đơn hàng của bạn đã được thanh toán thành công.</p>
+      <button onclick="goHome()">Về trang chủ</button>
+    </div>
+  </div>
+
+  <script>
+    function goHome() {
+      window.location.href = "index.html";
+    }
+
+    // Optional: thông báo pop-up khi mới vào trang
+    document.addEventListener("DOMContentLoaded", function () {
+      Swal.fire({
+        icon: 'success',
+        title: 'Thanh toán thành công!',
+        text: 'Đơn hàng của bạn đã hoàn tất.',
+        confirmButtonText: 'OK'
+      });
+    });
+  </script>
+</body>
+</html>
